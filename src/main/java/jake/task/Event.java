@@ -4,10 +4,10 @@ public class Event extends Task {
     protected String startDate;
     protected String endDate;
 
-    public Event(String description, String startDate, String endDate, boolean isDateFormatted) {
+    public Event(String description, String startDate, String endDate) {
         super(description.substring(6));
-        this.startDate = isDateFormatted ? startDate : convertDateTime(startDate);
-        this.endDate = isDateFormatted ? endDate : convertDateTime(endDate);
+        this.startDate = startDate;
+        this.endDate = endDate;
     }
 
     @Override
